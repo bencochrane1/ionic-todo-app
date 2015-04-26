@@ -10,6 +10,8 @@
 
 .item.item-avatar img {
     border-radius: 1.5em;
+    width: 50%;
+    height: 50%;
 }
 
 .preview-title {

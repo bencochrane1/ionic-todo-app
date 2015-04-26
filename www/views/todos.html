@@ -15,13 +15,13 @@
 
     <div ng-repeat="item in items | orderBy: '-createdAt' ">
         <div class="item item-avatar">
-            <img ng-src="img/placeholder.jpeg">
+            <img ng-src="img/placeholder.jpg">
             <h2>Marty McFly</h2>
             <p>{{ item.updatedAt | date:'longDate' }}</p>
         </div>
         <div class="blog-preview">
             <h1 class="preview-title">{{ item.title }}</h1>    
-            <img class="cover-image" ng-src="img/placeholder.jpeg">
+            <img class="cover-image" ng-src="img/placeholder.jpg">
         </div>
         
 
@@ -29,9 +29,7 @@
 
 
 
-
-
-    <ion-list show-delete="data.showDelete">
+<!--     <ion-list show-delete="data.showDelete">
         <ion-item 
             ng-repeat="item in items | orderBy: '-createdAt'" 
             item="item"
@@ -41,6 +39,6 @@
             class="ion-minus-circled"
             ng-click="onItemDelete(item)">
         </ion-item>
-    </ion-list>
+    </ion-list> -->
 
 </ion-content>
