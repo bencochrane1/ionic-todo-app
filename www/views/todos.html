@@ -1,17 +1,36 @@
-<ion-header-bar class="bar-positive">
+<ion-header-bar>
 
 <div class="buttons">
     <button 
-    class="button button-icon icon ion-ios7-minus-outline"
-    ng-click="data.showDelete = !data.ShowDelete">
+    class="button button-icon icon ion-navicon-round">
     </button>
-    <h1 class="title">All Todo Items</h1>
-    <button class="button" ui-sref="createTodo">New</button>
+    <h1 class="title publish">Home</h1>
+    <button class="button button-icon ion-compose" ui-sref="createTodo"></button>
 </div>
 
 </ion-header-bar>
 
 <ion-content>
+
+
+    <div ng-repeat="item in items | orderBy: '-createdAt' ">
+        <div class="item item-avatar">
+            <img ng-src="img/placeholder.jpeg">
+            <h2>Marty McFly</h2>
+            <p>{{ item.updatedAt | date:'longDate' }}</p>
+        </div>
+        <div class="blog-preview">
+            <h1 class="preview-title">{{ item.title }}</h1>    
+            <img class="cover-image" ng-src="img/placeholder.jpeg">
+        </div>
+        
+
+    </div>
+
+
+
+
+
     <ion-list show-delete="data.showDelete">
         <ion-item 
             ng-repeat="item in items | orderBy: '-createdAt'" 

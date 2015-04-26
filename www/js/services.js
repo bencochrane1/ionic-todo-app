@@ -1,72 +1,8 @@
-// angular.module('todoApp.services', [])
+angular.module('todoApp.services',[])
 
-// .factory('Todo', ['$http', function ($http) {
-//     return {
-
-//         getAll: function () {
-//             return $http.get('https://api.parse.com/1/classes/Todo', {
-//                 headers: {
-//                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
-//                     'X-Parse-REST-API-Key': PARSE_CREDENTIALS.REST_API_KEY
-//                 }
-//             });
-//         },
-
-//         get: function (id) {
-//             return $http.get('https://api.parse.com/1/classes/Todo/'+id, {
-//                 headers: {
-//                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
-//                     'X-Parse-REST-API-Key': PARSE_CREDENTIALS.REST_API_KEY
-//                 }
-//             });
-//         },
-
-//         create: function (data) {
-//             return $http.get('https://api.parse.com/1/classes/Todo', data, {
-//                 headers: {
-//                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
-//                     'X-Parse-REST-API-Key': PARSE_CREDENTIALS.REST_API_KEY,                    
-//                     'Content-Type': 'application/json'
-//                 }
-//             });
-//         },
-
-//         edit: function (id, data) {
-//             return $http.put('https://api.parse.com/1/classes/Todo/'+id, data, {
-//                 headers: {
-//                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
-//                     'X-Parse-REST-API-Key': PARSE_CREDENTIALS.REST_API_KEY,                    
-//                     'Content-Type': 'application/json'                    
-//                 }
-//             });
-//         },
-
-//         delete: function (id) {
-//             return $http.delete('https://api/parse.com/1/classes/Todo/'+id, {
-//                 headers: {
-//                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
-//                     'X-Parse-REST-API-Key': PARSE_CREDENTIALS.REST_API_KEY,                    
-//                     'Content-Type': 'application/json'                    
-//                 }
-//             });
-//         }
-
-
-//     }
-// }])
-
-// .value('PARSE_CREDENTIALS', {
-//     APP_ID: 'DDdiHytqB0wH4cw8huPgxWukH47T6eoJHFkN7Rmm',
-//     REST_API_KEY: 'p5dn7Zh39cSE9P6SqHnX7F2A4QR6fifGwMYQiy0b'
-// });
-
-
-/**
- * Created by Sandeep on 11/09/14.
- */
-angular.module('todoApp.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS',function($http,PARSE_CREDENTIALS){
+.factory('Todo',['$http','PARSE_CREDENTIALS',function ($http, PARSE_CREDENTIALS){
     return {
-        getAll:function(){
+        getAll: function () {
             return $http.get('https://api.parse.com/1/classes/Todo',{
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
@@ -74,7 +10,7 @@ angular.module('todoApp.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS
                 }
             });
         },
-        get:function(id){
+        get: function (id) {
             return $http.get('https://api.parse.com/1/classes/Todo/'+id,{
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
@@ -82,7 +18,7 @@ angular.module('todoApp.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS
                 }
             });
         },
-        create:function(data){
+        create: function (data) {
             return $http.post('https://api.parse.com/1/classes/Todo',data,{
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
@@ -110,7 +46,9 @@ angular.module('todoApp.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS
             });
         }
     }
-}]).value('PARSE_CREDENTIALS',{
-    APP_ID: 'xhTpJiNedJ7mmDj3LTTBUePqSVegcJHzEbh70Y0Q',
-    REST_API_KEY:'XCfQDPODgNB1HqmaCQgKLPWGxQ0lCUxqffzzURJY'
+}])
+
+.value('PARSE_CREDENTIALS',{
+    APP_ID: 'DDdiHytqB0wH4cw8huPgxWukH47T6eoJHFkN7Rmm',
+    REST_API_KEY:'p5dn7Zh39cSE9P6SqHnX7F2A4QR6fifGwMYQiy0b'
 });

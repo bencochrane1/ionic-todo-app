@@ -1,9 +1,11 @@
-<ion-header-bar class="bar-positive">
+<ion-header-bar>
 
     <div class="buttons">
-        <button class="button" ui-sref="todos">Back</button>
-        <h1 class="title">Create Todo</h1>
+        <button class="button button-icon ion-android-close" ui-sref="todos"></button>
+        <h1 class="title"></h1>
+        <button class="button button-clear button-balanced publish" ng-click="create()">Publish</button>        
     </div>
+
 
 </ion-header-bar>
 
@@ -11,10 +13,51 @@
 <ion-content>
     <div>
         <ion-list>
-            <li class="item item-input item-stacked-label">
-                <textarea type="text" placeholder="Start typing..." name="content" rows="10" ng-model="todo.content" required></textarea>
-            </li>
-            <ion-button class="button button-block button-positive" ng-click="create()">Add</ion-button>
+
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Blog Title</span>
+                <input ng-model="todo.title" type="text" placeholder="Blog Title">
+            </label>
+
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Author</span>
+                <input ng-model="todo.author" type="text" placeholder="Author Name">
+            </label>            
+
+            <div class="list card">
+
+              <div class="item">
+                <p>Blog Cover Image</p>
+              </div>
+
+              <div class="item item-body">
+                <img class="full-image" ng-src="http://fillmurray.com/g/200/80">
+              </div>
+
+              <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                  <i class="icon ion-android-camera"></i>
+                  Take Photo
+                </a>
+                <a class="tab-item" href="#">
+                  <i class="icon ion-android-image"></i>
+                  Camera Roll
+                </a>
+              </div>
+
+            </div>
+
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Blog Content</span>
+                <input ng-model="todo.content" type="text" placeholder="Blog Content">
+            </label>
         </ion-list>
     </div>
 </ion-content>
+
+
+
+
+<div class="list">
+
+</div>
